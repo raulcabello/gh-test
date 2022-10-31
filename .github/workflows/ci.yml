@@ -5,9 +5,15 @@ on:
     tags:
       - 'v*'
 
+# Declare default permissions as read only.
+permissions: read-all
+
+
 jobs:
   ci:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
 
     steps:
       - name: Login to GitHub
